@@ -1,0 +1,13 @@
+apiVersion: skaffold/v1beta11
+kind: Config
+build:
+  artifacts:
+  - image: kuba3/skaffold-example
+    sync:
+        manual:
+          - src: 'config.yaml'
+            dest: /etc/    # seems it isn't doing anything, sad face
+deploy:
+  kubectl:
+    manifests:
+      - k8s-*

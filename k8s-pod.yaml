@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: getting-started
+spec:
+  containers:
+  - name: getting-started
+    image: kuba3/skaffold-example
+    imagePullPolicy: IfNotPresent
+
